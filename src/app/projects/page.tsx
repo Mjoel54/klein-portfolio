@@ -105,7 +105,7 @@ export default function Projects() {
           <Card as="li" key={project.name} className="group relative">
             <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
 
-            <div className="relative z-10">
+            <div className="relative z-10 flex h-full flex-col">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
@@ -117,32 +117,19 @@ export default function Projects() {
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 {project.name}
               </h2>
-              <Card.Description>{project.description}</Card.Description>
-              <Card.Description>
-                Technologies: {project.technologies}
-              </Card.Description>
+              <div className="mb-5">
+                <Card.Description>{project.description}</Card.Description>
+                <Card.Description>
+                  Technologies: {project.technologies}
+                </Card.Description>
+              </div>
               <ProjectlLink
                 href={project.githubLink.href}
                 icon={GitHubIcon}
-                className="mt-6"
+                className="mt-auto"
               >
                 {project.githubLink.label}
               </ProjectlLink>
-              {/* <p className="mt-6 flex cursor-pointer text-sm font-medium text-zinc-400 transition hover:text-teal-500 dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2">{project.link.label}</span>
-              </p> */}
-              {/* <ul>
-                <li
-                  <Link
-                    to={#}
-                    className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-                  >
-                    <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
-                    <span className="ml-4">github
-                  </Link>
-                </li>
-              </ul> */}
             </div>
           </Card>
         ))}
