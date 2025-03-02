@@ -1,51 +1,79 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
+import clsx from 'clsx'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+// import logoPlanetaria from '@/images/logos/planetaria.svg'
+import lumiWhite from '@/images/logos/lumiWhite.svg'
+import { SocialLink } from '@/app/about/page'
+import { GitHubIcon } from '@/components/SocialIcons'
 
 const projects = [
   {
-    name: 'Planetaria',
-    description:
-      'Creating technology to empower civilians to explore space on their own terms.',
+    name: 'Lumi',
+    description: 'Household task management',
+    technologies:
+      'Full-stack MERN, Typescript, GraphQL, Apollo, Motion, Redux, Notistack',
     link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+    githubLink: {
+      href: 'https://github.com/Mjoel54/cleanly',
+      label: 'github',
+    },
+    logo: lumiWhite,
   },
   {
-    name: 'Animaginary',
+    name: 'Decibel',
     description:
       'High performance web animation library, hand-written in optimized WASM.',
     link: { href: '#', label: 'github.com' },
+    githubLink: {
+      href: 'https://github.com/Mjoel54/decibel-spa',
+      label: 'github',
+    },
     logo: logoAnimaginary,
   },
   {
-    name: 'HelioStream',
+    name: 'Klein Portfolio',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
+      'High performance web animation library, hand-written in optimized WASM.',
+    technologies: 'Front-end, React, Typescript, TailwindCSS, Nextjs',
     link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    githubLink: {
+      href: 'https://github.com/Mjoel54/klein-portfolio',
+      label: 'github',
+    },
+    logo: logoAnimaginary,
   },
 ]
+
+export function ProjectlLink({
+  className,
+  href,
+  children,
+  icon: Icon,
+}: {
+  className?: string
+  href: string
+  icon: React.ComponentType<{ className?: string }>
+  children: React.ReactNode
+}) {
+  return (
+    <li className={clsx(className, 'flex')}>
+      <a
+        href={href}
+        className="group/link flex text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
+      >
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-teal-500" />
+        <span className="ml-4 text-zinc-500 transition group-hover/link:text-teal-500">
+          {children}
+        </span>
+      </a>
+    </li>
+  )
+}
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -74,23 +102,48 @@ export default function Projects() {
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
         {projects.map((project) => (
-          <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={project.logo}
-                alt=""
-                className="h-8 w-8"
-                unoptimized
-              />
+          <Card as="li" key={project.name} className="group relative">
+            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
+
+            <div className="relative z-10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Image
+                  src={project.logo}
+                  alt=""
+                  className="h-8 w-8"
+                  unoptimized
+                />
+              </div>
+              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                {project.name}
+              </h2>
+              <Card.Description>{project.description}</Card.Description>
+              <Card.Description>
+                Technologies: {project.technologies}
+              </Card.Description>
+              <ProjectlLink
+                href={project.githubLink.href}
+                icon={GitHubIcon}
+                className="mt-6"
+              >
+                {project.githubLink.label}
+              </ProjectlLink>
+              {/* <p className="mt-6 flex cursor-pointer text-sm font-medium text-zinc-400 transition hover:text-teal-500 dark:text-zinc-200">
+                <LinkIcon className="h-6 w-6 flex-none" />
+                <span className="ml-2">{project.link.label}</span>
+              </p> */}
+              {/* <ul>
+                <li
+                  <Link
+                    to={#}
+                    className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+                  >
+                    <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+                    <span className="ml-4">github
+                  </Link>
+                </li>
+              </ul> */}
             </div>
-            <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={project.link.href}>{project.name}</Card.Link>
-            </h2>
-            <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{project.link.label}</span>
-            </p>
           </Card>
         ))}
       </ul>
