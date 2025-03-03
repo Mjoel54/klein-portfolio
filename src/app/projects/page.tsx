@@ -8,7 +8,6 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 // import logoPlanetaria from '@/images/logos/planetaria.svg'
 import lumiWhite from '@/images/logos/lumiWhite.svg'
-import { SocialLink } from '@/app/about/page'
 import { GitHubIcon } from '@/components/SocialIcons'
 
 const projects = [
@@ -16,7 +15,7 @@ const projects = [
     name: 'Lumi',
     description: 'Household task management',
     technologies:
-      'Full-stack MERN, Typescript, GraphQL, Apollo, Motion, Redux, Notistack',
+      'Full-stack MERN, Typescript, GraphQL, Apollo, Render, Motion, Redux, Notistack',
     link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
     githubLink: {
       href: 'https://github.com/Mjoel54/cleanly',
@@ -28,7 +27,8 @@ const projects = [
     name: 'Decibel',
     description:
       'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
+    technologies: 'Spotify API, Render',
+    link: { href: 'https://decibel.onrender.com/', label: 'Deployed app' },
     githubLink: {
       href: 'https://github.com/Mjoel54/decibel-spa',
       label: 'github',
@@ -36,11 +36,10 @@ const projects = [
     logo: logoAnimaginary,
   },
   {
-    name: 'Klein Portfolio',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    technologies: 'Front-end, React, Typescript, TailwindCSS, Nextjs',
-    link: { href: '#', label: 'github.com' },
+    name: 'This Portfolio Site',
+    description: 'A place to showacase my work',
+    technologies: 'Front-end, React, Typescript, TailwindCSS, Nextjs, Netflify',
+    link: { href: 'https://mitchellklein.netlify.app/', label: 'Deployed app' },
     githubLink: {
       href: 'https://github.com/Mjoel54/klein-portfolio',
       label: 'github',
@@ -49,7 +48,7 @@ const projects = [
   },
 ]
 
-export function ProjectlLink({
+function ProjectLink({
   className,
   href,
   children,
@@ -61,7 +60,7 @@ export function ProjectlLink({
   children: React.ReactNode
 }) {
   return (
-    <li className={clsx(className, 'flex')}>
+    <p className={clsx(className, 'flex')}>
       <a
         href={href}
         className="group/link flex text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
@@ -71,7 +70,7 @@ export function ProjectlLink({
           {children}
         </span>
       </a>
-    </li>
+    </p>
   )
 }
 
@@ -103,7 +102,7 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name} className="group relative">
-            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
+            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-600 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
 
             <div className="relative z-10 flex h-full flex-col">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
@@ -123,13 +122,14 @@ export default function Projects() {
                   Technologies: {project.technologies}
                 </Card.Description>
               </div>
-              <ProjectlLink
+
+              <ProjectLink
                 href={project.githubLink.href}
                 icon={GitHubIcon}
                 className="mt-auto"
               >
                 {project.githubLink.label}
-              </ProjectlLink>
+              </ProjectLink>
             </div>
           </Card>
         ))}
