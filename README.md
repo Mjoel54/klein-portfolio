@@ -1,6 +1,8 @@
-# Spotlight
+# Personal Portfolio Website
 
-Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+Welcome to my personal portfolio website. This site showcases my projects, skills, and experiences as a software developer. Here, you can find detailed information about my work, including code samples, project descriptions, and links to live demos. Feel free to explore and learn more about my journey in the tech industry.
+
+https://mitchellklein.netlify.app/
 
 ## Getting started
 

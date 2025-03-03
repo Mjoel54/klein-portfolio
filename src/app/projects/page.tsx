@@ -13,7 +13,8 @@ import { GitHubIcon } from '@/components/SocialIcons'
 const projects = [
   {
     name: 'Lumi',
-    description: 'Household task management',
+    description:
+      'Lumi is a smart household task management app that makes organising your home a breeze',
     technologies:
       'Full-stack MERN, Typescript, GraphQL, Apollo, Render, Motion, Redux, Notistack',
     link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
@@ -26,7 +27,7 @@ const projects = [
   {
     name: 'Decibel',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
+      'A dynamic music app that connects with the Spotify API to deliver personalized music experiences',
     technologies: 'Spotify API, Render',
     link: { href: 'https://decibel.onrender.com/', label: 'Deployed app' },
     githubLink: {
@@ -36,8 +37,8 @@ const projects = [
     logo: logoAnimaginary,
   },
   {
-    name: 'This Portfolio Site',
-    description: 'A place to showacase my work',
+    name: 'Personal Portfolio Website',
+    description: 'A showcase of my design and development journey',
     technologies: 'Front-end, React, Typescript, TailwindCSS, Nextjs, Netflify',
     link: { href: 'https://mitchellklein.netlify.app/', label: 'Deployed app' },
     githubLink: {
@@ -102,9 +103,9 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name} className="group relative">
-            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-600 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
+            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-100/50 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
 
-            <div className="relative z-10 flex h-full flex-col">
+            <div className="relative z-10 flex h-full flex-col px-4 py-2">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
@@ -116,8 +117,14 @@ export default function Projects() {
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 {project.name}
               </h2>
-              <div className="mb-5">
+
+              {/* Container that grows to push the technologies section to the bottom */}
+              <div className="mb-5 flex-grow overflow-y-auto">
                 <Card.Description>{project.description}</Card.Description>
+              </div>
+
+              {/* Technologies div */}
+              <div className="mb-5">
                 <Card.Description>
                   Technologies: {project.technologies}
                 </Card.Description>
