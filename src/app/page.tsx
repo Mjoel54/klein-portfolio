@@ -5,16 +5,21 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
+// import {
+//   GitHubIcon,
+//   InstagramIcon,
+//   LinkedInIcon,
+//   XIcon,
+// } from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoLinkedIn from '@/images/logos/linkedin.svg'
+import logoUnsw from '@/images/logos/unsw.svg'
+import logoUsyd from '@/images/logos/usyd.svg'
+import logoAlg from '@/images/logos/alg.svg'
+import logoCarrington from '@/images/logos/carrington.svg'
+import logoDet from '@/images/logos/det.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -64,6 +69,25 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       <path
         d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
         className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+function EducationIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
       />
     </svg>
   )
@@ -187,35 +211,28 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'EDU (Australian Learning Group, Ikon Institute of Education)',
+      title: 'LMS Coordinator',
+      logo: logoAlg,
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'NSW Department of Education',
+      title: 'High School Music Teacher',
+      logo: logoDet,
+      start: '2018',
+      end: '2022',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'The Carrington',
+      title: 'Bar Manager',
+      logo: logoCarrington,
+      start: '2016',
+      end: '2018',
     },
   ]
 
@@ -234,6 +251,46 @@ function Resume() {
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
+    </div>
+  )
+}
+
+function Education() {
+  let resume: Array<Role> = [
+    {
+      company: 'Edx/Univeristy of Sydney',
+      title: 'The Coding Bootcamp',
+      logo: logoUsyd,
+      start: 'October 2024',
+      end: 'February 2025',
+    },
+    {
+      company: 'University of New South Wales',
+      title: 'Bachelor of Music/Bachelor of Education',
+      logo: logoUnsw,
+      start: '2019',
+      end: '2022',
+    },
+    {
+      company: 'LinkedIn Learning',
+      title: 'Numerous online courses in web development',
+      logo: logoLinkedIn,
+      start: '2022',
+      end: 'Present',
+    },
+  ]
+
+  return (
+    <div className="h-full rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <EducationIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Education</span>
+      </h2>
+      <ol className="mt-6 space-y-4">
+        {resume.map((role, roleIndex) => (
+          <Role key={roleIndex} role={role} />
+        ))}
+      </ol>
     </div>
   )
 }
@@ -273,7 +330,7 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software developer, educator, and music theory enthusiast.
+            Software developer, educator, musician and lifelong learner.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Mitch, a Sydney-based former educator turned software
@@ -304,7 +361,7 @@ export default async function Home() {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+        {/* <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
@@ -313,6 +370,14 @@ export default async function Home() {
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
             <Resume />
+          </div>
+        </div> */}
+        <div className="flex w-full flex-col gap-4 md:flex-row">
+          <div className="w-full md:w-1/2">
+            <Resume />
+          </div>
+          <div className="w-full md:w-1/2">
+            <Education />
           </div>
         </div>
       </Container>
