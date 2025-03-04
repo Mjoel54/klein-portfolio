@@ -11,7 +11,7 @@ import logoDecibel from '@/images/logos/decibel.svg'
 import logoPortfolio from '@/images/logos/portfolio.svg'
 import { GitHubIcon } from '@/components/SocialIcons'
 
-const projects = [
+const projectData = [
   {
     name: 'Lumi',
     description:
@@ -50,8 +50,8 @@ const projects = [
   },
 ]
 
-// Isolate project data from the original mutable source
-const projectObjects = projects.map((project, i) => ({
+// Isolate project data objects for React components from the original mutable source
+const projectDataObjects = projectData.map((project, i) => ({
   id: i,
   name: project.name,
   description: project.description,
@@ -113,7 +113,7 @@ export default function Projects() {
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {projectObjects.map((project) => (
+        {projectDataObjects.map((project) => (
           <Card as="li" key={project.id} className="group relative">
             <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-100/50 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
 
