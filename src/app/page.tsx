@@ -258,7 +258,7 @@ function Resume() {
 function Education() {
   let resume: Array<Role> = [
     {
-      company: 'Edx/Univeristy of Sydney',
+      company: 'Edx/University of Sydney',
       title: 'The Coding Bootcamp',
       logo: logoUsyd,
       start: 'October 2024',
@@ -330,14 +330,14 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software developer, educator, musician and lifelong learner.
+            Software developer, music educator, and lifelong learner.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Mitch, a Sydney-based former educator turned software
             developer who discovered that code, like music, creates harmony
-            through carefully orchestrated patterns. My journey from teaching to
-            tech has shown me that great software, like a beautiful composition,
-            blends structure with creativity to solve real human problems.
+            through carefully orchestrated patterns. My commitment to lifelong
+            learning drives me to continuously explore new technologies and
+            approaches that solve real world problems.
           </p>
           {/* <div className="mt-6 flex gap-6">
             <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
