@@ -5,12 +5,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-// import {
-//   GitHubIcon,
-//   InstagramIcon,
-//   LinkedInIcon,
-//   XIcon,
-// } from '@/components/SocialIcons'
+import { BoltIcon } from '@heroicons/react/24/solid'
 
 import logoLinkedIn from '@/images/logos/linkedIn.svg'
 import logoUnsw from '@/images/logos/unsw.svg'
@@ -350,13 +345,19 @@ export default async function Home() {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             Software developer, music educator, and lifelong learner.
           </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Mitch, a Sydney-based former educator turned software
             developer who discovered that code, like music, creates harmony
             through carefully orchestrated patterns. My commitment to lifelong
             learning drives me to continuously explore new technologies and
             approaches that solve real world problems.
           </p>
+          <div className="flex items-center">
+            <BoltIcon className="h-4 w-4 text-yellow-600" />
+            <p className="ml-2 text-base text-zinc-600 dark:text-zinc-400">
+              Currently focusing on: TypeScript, React
+            </p>
+          </div>
           {/* <div className="mt-6 flex gap-6">
             <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
