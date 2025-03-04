@@ -5,9 +5,10 @@ import clsx from 'clsx'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-// import logoPlanetaria from '@/images/logos/planetaria.svg'
-import lumiWhite from '@/images/logos/lumiWhite.svg'
+
+import logoLumi from '@/images/logos/lumi.svg'
+import logoDecibel from '@/images/logos/decibel.svg'
+import logoPortfolio from '@/images/logos/portfolio.svg'
 import { GitHubIcon } from '@/components/SocialIcons'
 
 const projects = [
@@ -22,7 +23,7 @@ const projects = [
       href: 'https://github.com/Mjoel54/cleanly',
       label: 'github',
     },
-    logo: lumiWhite,
+    logo: logoLumi,
   },
   {
     name: 'Decibel',
@@ -34,7 +35,7 @@ const projects = [
       href: 'https://github.com/Mjoel54/decibel-spa',
       label: 'github',
     },
-    logo: logoAnimaginary,
+    logo: logoDecibel,
   },
   {
     name: 'Personal Portfolio Website',
@@ -45,7 +46,7 @@ const projects = [
       href: 'https://github.com/Mjoel54/klein-portfolio',
       label: 'github',
     },
-    logo: logoAnimaginary,
+    logo: logoPortfolio,
   },
 ]
 
