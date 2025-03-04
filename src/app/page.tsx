@@ -233,6 +233,7 @@ const resumeData: Array<Role> = [
   },
 ]
 
+// Isolate resume data objects for React components from the original mutable source
 const resumeDataObjects = resumeData.map((role, i) => ({
   id: i,
   company: role.company,
@@ -286,6 +287,7 @@ const educationData: Array<Role> = [
   },
 ]
 
+// Isolate education data objects for React components from the original mutable source
 const educationDataObjects = educationData.map((role, i) => ({
   id: i,
   company: role.company,

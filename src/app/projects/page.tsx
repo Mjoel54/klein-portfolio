@@ -50,7 +50,7 @@ const projectData = [
   },
 ]
 
-// Isolate project data from the original mutable source
+// Isolate project data objects for React components from the original mutable source
 const projectDataObjects = projectData.map((project, i) => ({
   id: i,
   name: project.name,
