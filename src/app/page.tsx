@@ -206,34 +206,43 @@ function Role({ role }: { role: Role }) {
   )
 }
 
-function Resume() {
-  let resume: Array<Role> = [
-    {
-      company: 'EDU (Australian Learning Group, Ikon Institute of Education)',
-      title: 'LMS Coordinator',
-      logo: logoAlg,
-      start: '2022',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+const resumeData: Array<Role> = [
+  {
+    company: 'EDU (Australian Learning Group, Ikon Institute of Education)',
+    title: 'LMS Coordinator',
+    logo: logoAlg,
+    start: '2022',
+    end: {
+      label: 'Present',
+      dateTime: new Date().getFullYear().toString(),
     },
-    {
-      company: 'NSW Department of Education',
-      title: 'High School Music Teacher',
-      logo: logoDet,
-      start: '2018',
-      end: '2022',
-    },
-    {
-      company: 'The Carrington',
-      title: 'Bar Manager',
-      logo: logoCarrington,
-      start: '2016',
-      end: '2018',
-    },
-  ]
+  },
+  {
+    company: 'NSW Department of Education',
+    title: 'High School Music Teacher',
+    logo: logoDet,
+    start: '2018',
+    end: '2022',
+  },
+  {
+    company: 'The Carrington',
+    title: 'Bar Manager',
+    logo: logoCarrington,
+    start: '2016',
+    end: '2018',
+  },
+]
 
+const resumeDataObjects = resumeData.map((role, i) => ({
+  id: i,
+  company: role.company,
+  title: role.title,
+  logo: role.logo,
+  start: role.start,
+  end: role.end,
+}))
+
+function Resume() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -241,8 +250,8 @@ function Resume() {
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <Role key={roleIndex} role={role} />
+        {resumeDataObjects.map((role) => (
+          <Role key={role.id} role={role} />
         ))}
       </ol>
       <Button href="#" variant="secondary" className="group mt-6 w-full">
@@ -253,31 +262,40 @@ function Resume() {
   )
 }
 
-function Education() {
-  let resume: Array<Role> = [
-    {
-      company: 'Edx/University of Sydney',
-      title: 'The Coding Bootcamp',
-      logo: logoUsyd,
-      start: 'October 2024',
-      end: 'February 2025',
-    },
-    {
-      company: 'University of New South Wales',
-      title: 'Bachelor of Music/Bachelor of Education',
-      logo: logoUnsw,
-      start: '2019',
-      end: '2022',
-    },
-    {
-      company: 'LinkedIn Learning',
-      title: 'Numerous online courses in web development',
-      logo: logoLinkedIn,
-      start: '2022',
-      end: 'Present',
-    },
-  ]
+const educationData: Array<Role> = [
+  {
+    company: 'Edx/University of Sydney',
+    title: 'The Coding Bootcamp',
+    logo: logoUsyd,
+    start: 'October 2024',
+    end: 'February 2025',
+  },
+  {
+    company: 'University of New South Wales',
+    title: 'Bachelor of Music/Bachelor of Education',
+    logo: logoUnsw,
+    start: '2019',
+    end: '2022',
+  },
+  {
+    company: 'LinkedIn Learning',
+    title: 'Numerous online courses in web development',
+    logo: logoLinkedIn,
+    start: '2022',
+    end: 'Present',
+  },
+]
 
+const educationDataObjects = educationData.map((role, i) => ({
+  id: i,
+  company: role.company,
+  title: role.title,
+  logo: role.logo,
+  start: role.start,
+  end: role.end,
+}))
+
+function Education() {
   return (
     <div className="h-full rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -285,8 +303,8 @@ function Education() {
         <span className="ml-3">Education</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <Role key={roleIndex} role={role} />
+        {educationDataObjects.map((role) => (
+          <Role key={role.id} role={role} />
         ))}
       </ol>
     </div>

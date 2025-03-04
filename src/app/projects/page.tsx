@@ -50,6 +50,17 @@ const projects = [
   },
 ]
 
+// Isolate project data from the original mutable source
+const projectObjects = projects.map((project, i) => ({
+  id: i,
+  name: project.name,
+  description: project.description,
+  technologies: project.technologies,
+  link: project.link,
+  githubLink: project.githubLink,
+  logo: project.logo,
+}))
+
 function ProjectLink({
   className,
   href,
@@ -102,12 +113,12 @@ export default function Projects() {
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {projects.map((project) => (
-          <Card as="li" key={project.name} className="group relative">
+        {projectObjects.map((project) => (
+          <Card as="li" key={project.id} className="group relative">
             <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-100/50 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
 
             <div className="relative z-10 flex h-full flex-col px-4 py-2">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
                   alt=""
