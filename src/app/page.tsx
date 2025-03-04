@@ -99,20 +99,20 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function Article({ article }: { article: ArticleWithSlug }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
+// function Article({ article }: { article: ArticleWithSlug }) {
+//   return (
+//     <Card as="article">
+//       <Card.Title href={`/articles/${article.slug}`}>
+//         {article.title}
+//       </Card.Title>
+//       <Card.Eyebrow as="time" dateTime={article.date} decorate>
+//         {formatDate(article.date)}
+//       </Card.Eyebrow>
+//       <Card.Description>{article.description}</Card.Description>
+//       <Card.Cta>Read article</Card.Cta>
+//     </Card>
+//   )
+// }
 
 function SocialLink({
   icon: Icon,
@@ -127,34 +127,34 @@ function SocialLink({
   )
 }
 
-function Newsletter() {
-  return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
-      </p>
-      <div className="mt-6 flex">
-        <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 focus:outline-hidden sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
-        />
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
-      </div>
-    </form>
-  )
-}
+// function Newsletter() {
+//   return (
+//     <form
+//       action="/thank-you"
+//       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+//     >
+//       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+//         <MailIcon className="h-6 w-6 flex-none" />
+//         <span className="ml-3">Stay up to date</span>
+//       </h2>
+//       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+//         Get notified when I publish something new, and unsubscribe at any time.
+//       </p>
+//       <div className="mt-6 flex">
+//         <input
+//           type="email"
+//           placeholder="Email address"
+//           aria-label="Email address"
+//           required
+//           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 focus:outline-hidden sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
+//         />
+//         <Button type="submit" className="ml-4 flex-none">
+//           Join
+//         </Button>
+//       </div>
+//     </form>
+//   )
+// }
 
 interface Role {
   company: string
@@ -241,9 +241,9 @@ const resumeDataObjects = resumeData.map((role, i) => ({
 function Resume() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+      <h2 className="flex justify-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <BriefcaseIcon className="mr-3 h-6 w-6 flex-none" />
+        <span>Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resumeDataObjects.map((role) => (
@@ -295,7 +295,7 @@ const educationDataObjects = educationData.map((role, i) => ({
 function Education() {
   return (
     <div className="h-full rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+      <h2 className="flex justify-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <EducationIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Education</span>
       </h2>
@@ -342,17 +342,19 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software developer, music educator, and lifelong learner.
-          </h1>
-          <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Mitch, a Sydney-based former educator turned software
-            developer who discovered that code, like music, creates harmony
-            through carefully orchestrated patterns. My commitment to lifelong
-            learning drives me to continuously explore new technologies and
-            approaches that solve real world problems.
-          </p>
-          <div className="flex items-center">
+          <div className="text-center sm:text-left">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              Software developer, music educator, and lifelong learner.
+            </h1>
+            <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
+              I&apos;m Mitch, a Sydney-based former educator turned software
+              developer who discovered that code, like music, creates harmony
+              through carefully orchestrated patterns. My commitment to lifelong
+              learning drives me to continuously explore new technologies and
+              approaches that solve real world problems.
+            </p>
+          </div>
+          <div className="flex items-center justify-center sm:justify-start">
             <BoltIcon className="h-4 w-4 text-yellow-600" />
             <p className="ml-2 text-base text-zinc-600 dark:text-zinc-400">
               Currently focusing on: TypeScript, React
