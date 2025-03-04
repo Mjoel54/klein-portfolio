@@ -115,28 +115,28 @@ export default function Projects() {
       >
         {projectDataObjects.map((project) => (
           <Card as="li" key={project.id} className="group relative">
-            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-100/50 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
+            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 rounded-2xl bg-zinc-100/50 sm:-inset-x-6 dark:bg-zinc-800/50" />
 
-            <div className="relative z-10 flex h-full flex-col px-4 py-2">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex h-full w-full flex-col items-center px-4 py-2 sm:items-start">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 sm:h-12 sm:w-12 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  className="h-12 w-12 sm:h-8 sm:w-8"
                   unoptimized
                 />
               </div>
-              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+              <h2 className="mt-6 text-center text-base font-semibold text-zinc-800 sm:text-left dark:text-zinc-100">
                 {project.name}
               </h2>
 
               {/* Container that grows to push the technologies section to the bottom */}
-              <div className="mb-5 flex-grow overflow-y-auto">
+              <div className="mb-5 flex-grow overflow-y-auto text-center sm:text-left">
                 <Card.Description>{project.description}</Card.Description>
               </div>
 
               {/* Technologies div */}
-              <div className="mb-5">
+              <div className="mb-5 text-center sm:text-left">
                 <Card.Description>
                   Technologies: {project.technologies}
                 </Card.Description>
