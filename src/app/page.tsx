@@ -11,10 +11,8 @@ import { Container } from '@/components/Container'
 //   LinkedInIcon,
 //   XIcon,
 // } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoLinkedIn from '@/images/logos/linkedin.svg'
+
+import logoLinkedIn from '@/images/logos/linkedIn.svg'
 import logoUnsw from '@/images/logos/unsw.svg'
 import logoUsyd from '@/images/logos/usyd.svg'
 import logoAlg from '@/images/logos/alg.svg'
@@ -182,7 +180,7 @@ function Role({ role }: { role: Role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
