@@ -216,7 +216,7 @@ const resumeData: Array<Role> = [
     company: 'NSW Department of Education',
     title: 'High School Music Teacher',
     logo: logoDet,
-    start: '2018',
+    start: '2017',
     end: '2022',
   },
   {
@@ -270,8 +270,8 @@ const educationData: Array<Role> = [
     company: 'University of New South Wales',
     title: 'Bachelor of Music/Bachelor of Education',
     logo: logoUnsw,
-    start: '2019',
-    end: '2022',
+    start: '2012',
+    end: '2017',
   },
   {
     company: 'LinkedIn Learning',
