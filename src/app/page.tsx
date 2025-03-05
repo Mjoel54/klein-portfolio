@@ -5,12 +5,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-// import {
-//   GitHubIcon,
-//   InstagramIcon,
-//   LinkedInIcon,
-//   XIcon,
-// } from '@/components/SocialIcons'
+import { BoltIcon } from '@heroicons/react/24/solid'
 
 import logoLinkedIn from '@/images/logos/linkedIn.svg'
 import logoUnsw from '@/images/logos/unsw.svg'
@@ -104,20 +99,20 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function Article({ article }: { article: ArticleWithSlug }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
+// function Article({ article }: { article: ArticleWithSlug }) {
+//   return (
+//     <Card as="article">
+//       <Card.Title href={`/articles/${article.slug}`}>
+//         {article.title}
+//       </Card.Title>
+//       <Card.Eyebrow as="time" dateTime={article.date} decorate>
+//         {formatDate(article.date)}
+//       </Card.Eyebrow>
+//       <Card.Description>{article.description}</Card.Description>
+//       <Card.Cta>Read article</Card.Cta>
+//     </Card>
+//   )
+// }
 
 function SocialLink({
   icon: Icon,
@@ -132,34 +127,34 @@ function SocialLink({
   )
 }
 
-function Newsletter() {
-  return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
-      </p>
-      <div className="mt-6 flex">
-        <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 focus:outline-hidden sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
-        />
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
-      </div>
-    </form>
-  )
-}
+// function Newsletter() {
+//   return (
+//     <form
+//       action="/thank-you"
+//       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+//     >
+//       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+//         <MailIcon className="h-6 w-6 flex-none" />
+//         <span className="ml-3">Stay up to date</span>
+//       </h2>
+//       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+//         Get notified when I publish something new, and unsubscribe at any time.
+//       </p>
+//       <div className="mt-6 flex">
+//         <input
+//           type="email"
+//           placeholder="Email address"
+//           aria-label="Email address"
+//           required
+//           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 focus:outline-hidden sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
+//         />
+//         <Button type="submit" className="ml-4 flex-none">
+//           Join
+//         </Button>
+//       </div>
+//     </form>
+//   )
+// }
 
 interface Role {
   company: string
@@ -206,43 +201,53 @@ function Role({ role }: { role: Role }) {
   )
 }
 
-function Resume() {
-  let resume: Array<Role> = [
-    {
-      company: 'EDU (Australian Learning Group, Ikon Institute of Education)',
-      title: 'LMS Coordinator',
-      logo: logoAlg,
-      start: '2022',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+const resumeData: Array<Role> = [
+  {
+    company: 'EDU (Australian Learning Group, Ikon Institute of Education)',
+    title: 'LMS Coordinator',
+    logo: logoAlg,
+    start: '2022',
+    end: {
+      label: 'Present',
+      dateTime: new Date().getFullYear().toString(),
     },
-    {
-      company: 'NSW Department of Education',
-      title: 'High School Music Teacher',
-      logo: logoDet,
-      start: '2018',
-      end: '2022',
-    },
-    {
-      company: 'The Carrington',
-      title: 'Bar Manager',
-      logo: logoCarrington,
-      start: '2016',
-      end: '2018',
-    },
-  ]
+  },
+  {
+    company: 'NSW Department of Education',
+    title: 'High School Music Teacher',
+    logo: logoDet,
+    start: '2018',
+    end: '2022',
+  },
+  {
+    company: 'The Carrington',
+    title: 'Bar Manager',
+    logo: logoCarrington,
+    start: '2016',
+    end: '2018',
+  },
+]
 
+// Isolate resume data objects for React components from the original mutable source
+const resumeDataObjects = resumeData.map((role, i) => ({
+  id: i,
+  company: role.company,
+  title: role.title,
+  logo: role.logo,
+  start: role.start,
+  end: role.end,
+}))
+
+function Resume() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+      <h2 className="flex justify-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <BriefcaseIcon className="mr-3 h-6 w-6 flex-none" />
+        <span>Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <Role key={roleIndex} role={role} />
+        {resumeDataObjects.map((role) => (
+          <Role key={role.id} role={role} />
         ))}
       </ol>
       <Button href="#" variant="secondary" className="group mt-6 w-full">
@@ -253,40 +258,50 @@ function Resume() {
   )
 }
 
-function Education() {
-  let resume: Array<Role> = [
-    {
-      company: 'Edx/University of Sydney',
-      title: 'The Coding Bootcamp',
-      logo: logoUsyd,
-      start: 'October 2024',
-      end: 'February 2025',
-    },
-    {
-      company: 'University of New South Wales',
-      title: 'Bachelor of Music/Bachelor of Education',
-      logo: logoUnsw,
-      start: '2019',
-      end: '2022',
-    },
-    {
-      company: 'LinkedIn Learning',
-      title: 'Numerous online courses in web development',
-      logo: logoLinkedIn,
-      start: '2022',
-      end: 'Present',
-    },
-  ]
+const educationData: Array<Role> = [
+  {
+    company: 'Edx/University of Sydney',
+    title: 'The Coding Bootcamp',
+    logo: logoUsyd,
+    start: 'October 2024',
+    end: 'February 2025',
+  },
+  {
+    company: 'University of New South Wales',
+    title: 'Bachelor of Music/Bachelor of Education',
+    logo: logoUnsw,
+    start: '2019',
+    end: '2022',
+  },
+  {
+    company: 'LinkedIn Learning',
+    title: 'Numerous online courses in web development',
+    logo: logoLinkedIn,
+    start: '2022',
+    end: 'Present',
+  },
+]
 
+// Isolate education data objects for React components from the original mutable source
+const educationDataObjects = educationData.map((role, i) => ({
+  id: i,
+  company: role.company,
+  title: role.title,
+  logo: role.logo,
+  start: role.start,
+  end: role.end,
+}))
+
+function Education() {
   return (
     <div className="h-full rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+      <h2 className="flex justify-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <EducationIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Education</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <Role key={roleIndex} role={role} />
+        {educationDataObjects.map((role) => (
+          <Role key={role.id} role={role} />
         ))}
       </ol>
     </div>
@@ -327,16 +342,24 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software developer, music educator, and lifelong learner.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Mitch, a Sydney-based former educator turned software
-            developer who discovered that code, like music, creates harmony
-            through carefully orchestrated patterns. My commitment to lifelong
-            learning drives me to continuously explore new technologies and
-            approaches that solve real world problems.
-          </p>
+          <div className="text-center sm:text-left">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              Software developer, music educator, and lifelong learner.
+            </h1>
+            <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
+              I&apos;m Mitch, a Sydney-based former educator turned software
+              developer who discovered that code, like music, creates harmony
+              through carefully orchestrated patterns. My commitment to lifelong
+              learning drives me to continuously explore new technologies and
+              approaches that solve real world problems.
+            </p>
+          </div>
+          <div className="flex items-center justify-center sm:justify-start">
+            <BoltIcon className="h-4 w-4 text-yellow-600" />
+            <p className="ml-2 text-base text-zinc-600 dark:text-zinc-400">
+              Currently focusing on: TypeScript, React
+            </p>
+          </div>
           {/* <div className="mt-6 flex gap-6">
             <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
             <SocialLink

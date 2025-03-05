@@ -57,7 +57,7 @@ export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <div className="lg:pl-20">
+        <div className="flex justify-center sm:justify-between lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage}
@@ -67,7 +67,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="lg:order-first lg:row-span-2">
+        <div className="text-center sm:text-left lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             I&apos;m Mitchell Klein, a Sydney-based developer crafting digital
             solutions
@@ -109,13 +109,7 @@ export default function About() {
           </div>
         </div>
         <div className="lg:pl-20">
-          <ul role="list">
-            {/* <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink> */}
+          <ul role="list" className="flex flex-col items-center sm:items-start">
             <SocialLink
               href="https://github.com/Mjoel54"
               icon={GitHubIcon}
@@ -130,13 +124,6 @@ export default function About() {
             >
               Follow on LinkedIn
             </SocialLink>
-            {/* <SocialLink
-              href="mailto:mitchjoelklein@hotmail.com"
-              icon={MailIcon}
-              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-            >
-              mitchjoelklein@hotmail.com
-            </SocialLink> */}
           </ul>
         </div>
       </div>
