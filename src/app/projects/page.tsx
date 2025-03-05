@@ -40,7 +40,7 @@ const projectData = [
   {
     name: 'Personal Portfolio Website',
     description: 'A showcase of my design and development journey',
-    technologies: 'Front-end, React, Typescript, TailwindCSS, Nextjs, Netflify',
+    technologies: 'Front-end, React, Typescript, TailwindCSS, Nextjs, Netlify',
     link: { href: 'https://mitchellklein.netlify.app/', label: 'Deployed app' },
     githubLink: {
       href: 'https://github.com/Mjoel54/klein-portfolio',
@@ -107,7 +107,7 @@ export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      intro="I'm excited to share a few projects that represent my ongoing journey of growth and learning. Many of these projects are open-source—if something catches your eye, feel free to dive into the code and offer your ideas for improvement."
     >
       <ul
         role="list"
