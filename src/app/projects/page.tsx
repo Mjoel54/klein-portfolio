@@ -18,7 +18,7 @@ const projectData = [
       'Lumi is a smart household task management app that makes organising your home a breeze',
     technologies:
       'Full-stack MERN, Typescript, GraphQL, Apollo, Render, Motion, Redux, Notistack',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+    link: { href: 'https://lumi-0vvm.onrender.com/', label: 'planetaria.tech' },
     githubLink: {
       href: 'https://github.com/Mjoel54/cleanly',
       label: 'github',
