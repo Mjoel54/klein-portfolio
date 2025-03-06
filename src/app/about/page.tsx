@@ -4,13 +4,8 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
+import kleinPortrait from '@/images/kleinPortrait.jpg'
 
 function SocialLink({
   className,
@@ -60,10 +55,10 @@ export default function About() {
         <div className="flex justify-center sm:justify-between lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
-              src={portraitImage}
+              src={kleinPortrait}
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover object-[center_20%] dark:bg-zinc-800"
             />
           </div>
         </div>
