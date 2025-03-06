@@ -78,8 +78,8 @@ function ProjectLink({
         href={href}
         className="group/link flex text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-teal-500" />
-        <span className="ml-4 text-zinc-500 transition group-hover/link:text-teal-500">
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover/link:fill-orange-900 dark:group-hover/link:fill-orange-200" />
+        <span className="ml-4 text-zinc-500 transition group-hover/link:text-orange-900 dark:group-hover/link:text-orange-200">
           {children}
         </span>
       </a>
