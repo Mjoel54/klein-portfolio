@@ -30,7 +30,8 @@ const projectData = [
     description:
       'A dynamic music app that connects with the Spotify API to deliver personalized music experiences',
     technologies: 'Spotify API, Render',
-    link: { href: 'https://decibel.onrender.com/', label: 'Deployed app' },
+    // link: { href: 'https://decibel.onrender.com/', label: 'Deployed app' },
+    link: { href: '#', label: 'Deployed app' },
     githubLink: {
       href: 'https://github.com/Mjoel54/decibel-spa',
       label: 'github',
@@ -118,14 +119,16 @@ export default function Projects() {
             <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 rounded-2xl bg-zinc-100/50 sm:-inset-x-6 dark:bg-zinc-800/50" />
 
             <div className="relative z-10 flex h-full w-full flex-col items-center px-4 py-2 sm:items-start">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 sm:h-12 sm:w-12 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                <Image
-                  src={project.logo}
-                  alt=""
-                  className="h-12 w-12 sm:h-8 sm:w-8"
-                  unoptimized
-                />
-              </div>
+              <a href={project.link.href}>
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 sm:h-12 sm:w-12 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <Image
+                    src={project.logo}
+                    alt=""
+                    className="h-12 w-12 sm:h-8 sm:w-8"
+                    unoptimized
+                  />
+                </div>
+              </a>
               <h2 className="mt-6 text-center text-base font-semibold text-zinc-800 sm:text-left dark:text-zinc-100">
                 {project.name}
               </h2>
