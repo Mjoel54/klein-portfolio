@@ -188,8 +188,8 @@ function ThemeToggle() {
       className="group cursor-pointer rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={() => setTheme(otherTheme)}
     >
-      <SunIcon className="hidden h-6 w-6 fill-orange-200 stroke-orange-200 transition group-hover:fill-orange-200 group-hover:stroke-orange-200 dark:block [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
-      <MoonIcon className="block h-6 w-6 fill-orange-50 stroke-orange-900 transition dark:hidden [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@medianot(prefers-color-scheme:dark)]:fill-teal-400/10 [@medianot(prefers-color-scheme:dark)]:stroke-teal-500" />
+      <SunIcon className="block h-6 w-6 fill-zinc-500 stroke-zinc-500 transition group-hover:fill-orange-900 group-hover:stroke-orange-900 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
+      <MoonIcon className="hidden h-6 w-6 fill-orange-200 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@medianot(prefers-color-scheme:dark)]:fill-teal-400/10 [@medianot(prefers-color-scheme:dark)]:stroke-teal-500" />
     </button>
   )
 }
