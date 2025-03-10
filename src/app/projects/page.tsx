@@ -9,9 +9,26 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import logoLumi from '@/images/logos/lumi.svg'
 import logoDecibel from '@/images/logos/decibel.svg'
 import logoPortfolio from '@/images/logos/portfolio.svg'
+import logoCinnamonLane from '@/images/logos/cinnamonLane.svg'
 import { GitHubIcon } from '@/components/SocialIcons'
 
 const projectData = [
+  {
+    name: 'Cinnamon Lane',
+    description:
+      'An e-commerce platform for home decor and lifestyle products. Redux handles state management for typed cart state throughout the app',
+    technologies:
+      'Front-end, React, Redux, TypeScript, Tailwind CSS, Next.js, Netlify',
+    link: {
+      href: 'https://cinnamonlane.netlify.app/',
+      label: 'cinnamonlane.netlify.app',
+    },
+    githubLink: {
+      href: 'https://github.com/Mjoel54/ecommerce-website',
+      label: 'github',
+    },
+    logo: logoCinnamonLane,
+  },
   {
     name: 'Lumi',
     description:
@@ -25,23 +42,23 @@ const projectData = [
     },
     logo: logoLumi,
   },
-  {
-    name: 'Decibel',
-    description:
-      'A dynamic music app that connects with the Spotify API to deliver personalized music experiences',
-    technologies: 'Spotify API, Render',
-    // link: { href: 'https://decibel.onrender.com/', label: 'Deployed app' },
-    link: { href: '#', label: 'Deployed app' },
-    githubLink: {
-      href: 'https://github.com/Mjoel54/decibel-spa',
-      label: 'github',
-    },
-    logo: logoDecibel,
-  },
+  // {
+  //   name: 'Decibel',
+  //   description:
+  //     'A dynamic music app that connects with the Spotify API to deliver personalized music experiences',
+  //   technologies: 'Spotify API, Render',
+  //   // link: { href: 'https://decibel.onrender.com/', label: 'Deployed app' },
+  //   link: { href: '#', label: 'Deployed app' },
+  //   githubLink: {
+  //     href: 'https://github.com/Mjoel54/decibel-spa',
+  //     label: 'github',
+  //   },
+  //   logo: logoDecibel,
+  // },
   {
     name: 'Personal Portfolio Website',
     description: 'A showcase of my design and development journey',
-    technologies: 'Front-end, React, Typescript, TailwindCSS, Nextjs, Netlify',
+    technologies: 'Front-end, React, Typescript, TailwindCSS, Next.js, Netlify',
     link: { href: 'https://mitchellklein.netlify.app/', label: 'Deployed app' },
     githubLink: {
       href: 'https://github.com/Mjoel54/klein-portfolio',
