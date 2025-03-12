@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: {
     template: '%s - Mitchell Klein',
     default:
-      'Mitchell Klein - Software developer, music educator, and lifelong learner',
+      'Mitchell Klein - Software developer, LMS specialist, music educator, and lifelong learner',
   },
   description:
     'I’m Mitch, a Sydney-based software developer who discovered that code, like music, creates harmony through carefully orchestrated patterns.',
