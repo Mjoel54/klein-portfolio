@@ -9,9 +9,10 @@ export const metadata: Metadata = {
   title: {
     template: '%s - Mitchell Klein',
     default:
-      'Mitchell Klein - Software designer, founder, and amateur astronaut',
+      'Mitchell Klein - Software designer, music educator, and lifelong learner',
   },
-  description: 'I’m Mitch, a Sydney-based software developer.',
+  description:
+    'I’m Mitch, a Sydney-based software developer who discovered that code, like music, creates harmony through carefully orchestrated patterns.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
