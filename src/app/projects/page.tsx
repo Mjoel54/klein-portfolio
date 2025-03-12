@@ -16,7 +16,7 @@ const projectData = [
   {
     name: 'Cinnamon Lane',
     description:
-      'An e-commerce platform for home decor and lifestyle products. Redux handles state management for typed cart state throughout the app',
+      'An e-commerce platform for home decor and lifestyle products. Redux handles type safe state management throughout the app',
     technologies:
       'Front-end, React, Redux, TypeScript, Tailwind CSS, Next.js, Netlify',
     link: {
