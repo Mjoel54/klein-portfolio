@@ -7,40 +7,65 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
 import logoLumi from '@/images/logos/lumi.svg'
-import logoDecibel from '@/images/logos/decibel.svg'
+// import logoDecibel from '@/images/logos/decibel.svg'
 import logoPortfolio from '@/images/logos/portfolio.svg'
 import logoCinnamonLane from '@/images/logos/cinnamonLane.svg'
+import logoAcademix from '@/images/logos/academix.svg'
 import { GitHubIcon } from '@/components/SocialIcons'
 
 const projectData = [
   {
     name: 'Cinnamon Lane',
     description:
-      'An e-commerce platform for home decor and lifestyle products. Redux handles type safe state management throughout the app',
-    technologies:
-      'Front-end, React, Redux, TypeScript, Tailwind CSS, Next.js, Netlify',
-    link: {
-      href: 'https://cinnamonlane.netlify.app/',
-      label: 'cinnamonlane.netlify.app',
-    },
-    githubLink: {
-      href: 'https://github.com/Mjoel54/ecommerce-website',
-      label: 'github',
-    },
+      'A front end e-commerce platform for home decor and lifestyle products. Redux handles type safe state management',
+    technologies: [
+      'Front end',
+      'TypeScript',
+      'React',
+      'Redux',
+      'Tailwind CSS',
+      'Next.js',
+      'Netlify',
+    ],
+    deployedLink: 'https://cinnamonlane.netlify.app/',
+    githubLink: 'https://github.com/Mjoel54/ecommerce-website',
     logo: logoCinnamonLane,
   },
   {
     name: 'Lumi',
     description:
-      'Lumi is a smart household task management app that makes organising your home a breeze',
-    technologies:
-      'Full-stack MERN, Typescript, GraphQL, Apollo, Render, Motion, Redux, Notistack',
-    link: { href: 'https://lumi-0vvm.onrender.com/', label: 'planetaria.tech' },
-    githubLink: {
-      href: 'https://github.com/Mjoel54/cleanly',
-      label: 'github',
-    },
+      'Lumi is a household task management app to make organising your home a breeze',
+    technologies: [
+      'Full stack MERN',
+      'TypeScript',
+      'React',
+      'Redux',
+      'GraphQL',
+      'Apollo',
+      'Render',
+      'Motion',
+      'Notistack',
+    ],
+    deployedLink: 'https://lumi-0vvm.onrender.com/',
+    githubLink: 'https://github.com/Mjoel54/cleanly',
     logo: logoLumi,
+  },
+  {
+    name: 'Academix',
+    description:
+      'A back end Express API application built for Learning Management Systems',
+    technologies: [
+      'Back end',
+      'TypeScript',
+      'Express',
+      'Node.js',
+      'MongoDB',
+      'Mongoose',
+      'Jest',
+    ],
+    deployedLink: 'https://github.com/Mjoel54/academix',
+    githubLink: 'https://github.com/Mjoel54/academix',
+    logo: logoAcademix,
   },
   // {
   //   name: 'Decibel',
@@ -48,7 +73,7 @@ const projectData = [
   //     'A dynamic music app that connects with the Spotify API to deliver personalized music experiences',
   //   technologies: 'Spotify API, Render',
   //   // link: { href: 'https://decibel.onrender.com/', label: 'Deployed app' },
-  //   link: { href: '#', label: 'Deployed app' },
+  //   deployedLink: { href: '#', label: 'Deployed app' },
   //   githubLink: {
   //     href: 'https://github.com/Mjoel54/decibel-spa',
   //     label: 'github',
@@ -58,12 +83,16 @@ const projectData = [
   {
     name: 'Personal Portfolio Website',
     description: 'A showcase of my design and development journey',
-    technologies: 'Front-end, React, Typescript, TailwindCSS, Next.js, Netlify',
-    link: { href: 'https://mitchellklein.netlify.app/', label: 'Deployed app' },
-    githubLink: {
-      href: 'https://github.com/Mjoel54/klein-portfolio',
-      label: 'github',
-    },
+    technologies: [
+      'Front end',
+      'TypeScript',
+      'React',
+      'Tailwind CSS',
+      'Next.js',
+      'Netlify',
+    ],
+    deployedLink: 'https://mitchellklein.netlify.app/',
+    githubLink: 'https://github.com/Mjoel54/klein-portfolio',
     logo: logoPortfolio,
   },
 ]
@@ -74,7 +103,7 @@ const projectDataObjects = projectData.map((project, i) => ({
   name: project.name,
   description: project.description,
   technologies: project.technologies,
-  link: project.link,
+  deployedLink: project.deployedLink,
   githubLink: project.githubLink,
   logo: project.logo,
 }))
@@ -136,7 +165,7 @@ export default function Projects() {
             <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 rounded-2xl bg-zinc-100/50 sm:-inset-x-6 dark:bg-zinc-800/50" />
 
             <div className="relative z-10 flex h-full w-full flex-col items-center px-4 py-2 sm:items-start">
-              <a href={project.link.href}>
+              <a href={project.deployedLink}>
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 sm:h-12 sm:w-12 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                   <Image
                     src={project.logo}
@@ -156,18 +185,24 @@ export default function Projects() {
               </div>
 
               {/* Technologies div */}
-              <div className="mb-5 text-center sm:text-left">
-                <Card.Description>
-                  Technologies: {project.technologies}
-                </Card.Description>
+              <div className="mb-3 flex flex-wrap gap-x-2 gap-y-3">
+                {project.technologies.map((tech, i) => {
+                  return (
+                    <div
+                      key={i}
+                      className="rounded-md bg-zinc-200 px-2 py-1 text-sm dark:bg-zinc-800"
+                    >
+                      {tech}
+                    </div>
+                  )
+                })}
               </div>
-
               <ProjectLink
-                href={project.githubLink.href}
+                href={project.githubLink}
                 icon={GitHubIcon}
                 className="mt-auto"
               >
-                {project.githubLink.label}
+                github
               </ProjectLink>
             </div>
           </Card>
