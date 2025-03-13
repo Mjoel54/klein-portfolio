@@ -343,7 +343,8 @@ export default async function Home() {
         <div className="max-w-2xl">
           <div className="text-center sm:text-left">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-              Software developer, music educator, and lifelong learner.
+              Software developer, LMS specialist, music educator, and lifelong
+              learner.
             </h1>
             <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
               I&apos;m Mitch, a Sydney-based former educator turned software
