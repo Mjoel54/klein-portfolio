@@ -188,7 +188,7 @@ export default function Projects() {
                   return (
                     <div
                       key={i}
-                      className="rounded-md bg-zinc-800 px-2 py-1 text-sm"
+                      className="rounded-md bg-zinc-200 px-2 py-1 text-sm dark:bg-zinc-800"
                     >
                       {tech}
                     </div>
