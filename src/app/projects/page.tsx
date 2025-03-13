@@ -19,10 +19,10 @@ const projectData = [
     description:
       'A front end e-commerce platform for home decor and lifestyle products. Redux handles type safe state management',
     technologies: [
-      'Front-end',
+      'Front end',
+      'TypeScript',
       'React',
       'Redux',
-      'TypeScript',
       'Tailwind CSS',
       'Next.js',
       'Netlify',
@@ -36,13 +36,14 @@ const projectData = [
     description:
       'Lumi is a household task management app to make organising your home a breeze',
     technologies: [
-      'Full-stack MERN',
-      'Typescript',
+      'Full stack MERN',
+      'TypeScript',
+      'React',
+      'Redux',
       'GraphQL',
       'Apollo',
       'Render',
       'Motion',
-      'Redux',
       'Notistack',
     ],
     deployedLink: 'https://lumi-0vvm.onrender.com/',
@@ -55,6 +56,7 @@ const projectData = [
       'A back end Express API application built for Learning Management Systems',
     technologies: [
       'Back end',
+      'TypeScript',
       'Express',
       'Node.js',
       'MongoDB',
@@ -82,10 +84,10 @@ const projectData = [
     name: 'Personal Portfolio Website',
     description: 'A showcase of my design and development journey',
     technologies: [
-      'Front-end',
+      'Front end',
+      'TypeScript',
       'React',
-      'Typescript',
-      'TailwindCSS',
+      'Tailwind CSS',
       'Next.js',
       'Netlify',
     ],
