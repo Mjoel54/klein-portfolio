@@ -11,6 +11,7 @@ import logoLumi from '@/images/logos/lumi.svg'
 import logoPortfolio from '@/images/logos/portfolio.svg'
 import logoCinnamonLane from '@/images/logos/cinnamonLane.svg'
 import logoAcademix from '@/images/logos/academix.svg'
+import logoEduJourney from '@/images/logos/edujourney.svg'
 import { GitHubIcon } from '@/components/SocialIcons'
 
 const projectData = [
@@ -67,20 +68,16 @@ const projectData = [
     githubLink: 'https://github.com/Mjoel54/academix',
     logo: logoAcademix,
   },
+  {
+    name: 'EduJourney',
+    description:
+      'EduJourney is a back end application built with Express, SQL, and PostgreSQL that lays the foundation for a digital badge and certification tracking system to be used in educational environments.',
+    technologies: ['Back end', 'TypeScript', 'Express', 'SQL', 'PostgreSQL'],
+    deployedLink: 'https://github.com/Mjoel54/edujourney',
+    githubLink: 'https://github.com/Mjoel54/edujourney',
+    logo: logoEduJourney,
+  },
 
-  // {
-  //   name: 'Decibel',
-  //   description:
-  //     'A dynamic music app that connects with the Spotify API to deliver personalized music experiences',
-  //   technologies: 'Spotify API, Render',
-  //   // link: { href: 'https://decibel.onrender.com/', label: 'Deployed app' },
-  //   deployedLink: { href: '#', label: 'Deployed app' },
-  //   githubLink: {
-  //     href: 'https://github.com/Mjoel54/decibel-spa',
-  //     label: 'github',
-  //   },
-  //   logo: logoDecibel,
-  // },
   {
     name: 'Personal Portfolio Website',
     description: 'A showcase of my design and development journey',
