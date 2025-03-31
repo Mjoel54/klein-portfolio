@@ -15,23 +15,6 @@ import { GitHubIcon } from '@/components/SocialIcons'
 
 const projectData = [
   {
-    name: 'Cinnamon Lane',
-    description:
-      'A front end e-commerce platform for home decor and lifestyle products. Redux handles type safe state management',
-    technologies: [
-      'Front end',
-      'TypeScript',
-      'React',
-      'Redux',
-      'Tailwind CSS',
-      'Next.js',
-      'Netlify',
-    ],
-    deployedLink: 'https://cinnamonlane.netlify.app/',
-    githubLink: 'https://github.com/Mjoel54/ecommerce-website',
-    logo: logoCinnamonLane,
-  },
-  {
     name: 'Lumi',
     description:
       'Lumi is a household task management app to make organising your home a breeze',
@@ -51,9 +34,26 @@ const projectData = [
     logo: logoLumi,
   },
   {
+    name: 'Cinnamon Lane',
+    description:
+      'A front end e-commerce platform for home decor and lifestyle products. Redux handles type safe state management',
+    technologies: [
+      'Front end',
+      'TypeScript',
+      'React',
+      'Redux',
+      'Tailwind CSS',
+      'Next.js',
+      'Netlify',
+    ],
+    deployedLink: 'https://cinnamonlane.netlify.app/',
+    githubLink: 'https://github.com/Mjoel54/ecommerce-website',
+    logo: logoCinnamonLane,
+  },
+  {
     name: 'Academix',
     description:
-      'A back end Express API application built for Learning Management Systems',
+      'A modern Learning Management System (LMS) API built with Express.js, Mongoose and MongoDB. The application provides a robust backend for managing educational resources including courses, assignments, students, and teachers.',
     technologies: [
       'Back end',
       'TypeScript',
@@ -67,6 +67,7 @@ const projectData = [
     githubLink: 'https://github.com/Mjoel54/academix',
     logo: logoAcademix,
   },
+
   // {
   //   name: 'Decibel',
   //   description:
