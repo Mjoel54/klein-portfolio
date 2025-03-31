@@ -53,7 +53,7 @@ const projectData = [
   {
     name: 'Academix',
     description:
-      'A back end Express API application built for Learning Management Systems',
+      'A modern Learning Management System (LMS) API built with Express.js, Mongoose and MongoDB. The application provides a robust backend for managing educational resources including courses, assignments, students, and teachers.',
     technologies: [
       'Back end',
       'TypeScript',
