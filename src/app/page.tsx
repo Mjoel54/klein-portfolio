@@ -200,112 +200,119 @@ function Role({ role }: { role: Role }) {
   )
 }
 
-const resumeData: Array<Role> = [
-  {
-    company: 'EDU (Australian Learning Group, Ikon Institute of Education)',
-    title: 'LMS Coordinator',
-    logo: logoAlg,
-    start: '2022',
-    end: {
-      label: 'Present',
-      dateTime: new Date().getFullYear().toString(),
-    },
-  },
-  {
-    company: 'NSW Department of Education',
-    title: 'High School Music Teacher',
-    logo: logoDet,
-    start: '2017',
-    end: '2022',
-  },
-  {
-    company: 'The Carrington',
-    title: 'Bar Manager',
-    logo: logoCarrington,
-    start: '2016',
-    end: '2018',
-  },
-]
+// const resumeData: Array<Role> = [
+//   {
+//     company: 'Actuaries Institute',
+//     title: 'Education Support Officer',
+//     logo: logoAlg,
+//     start: '2025',
+//     end: {
+//       label: 'Present',
+//       dateTime: new Date().getFullYear().toString(),
+//     },
+//   },
+//   {
+//     company: 'EDU (Australian Learning Group, Ikon Institute of Education)',
+//     title: 'LMS Coordinator',
+//     logo: logoAlg,
+//     start: '2022',
+//     end: '2025',
+//   },
+//   {
+//     company: 'NSW Department of Education',
+//     title: 'High School Music Teacher',
+//     logo: logoDet,
+//     start: '2017',
+//     end: '2022',
+//   },
+//   {
+//     company: 'The Carrington',
+//     title: 'Bar Manager',
+//     logo: logoCarrington,
+//     start: '2016',
+//     end: '2018',
+//   },
+// ]
 
-// Isolate resume data objects for React components from the original mutable source
-const resumeDataObjects = resumeData.map((role, i) => ({
-  id: i,
-  company: role.company,
-  title: role.title,
-  logo: role.logo,
-  start: role.start,
-  end: role.end,
-}))
+// // Isolate resume data objects for React components from the original mutable source
+// const resumeDataObjects = resumeData.map((role, i) => ({
+//   id: i,
+//   company: role.company,
+//   title: role.title,
+//   logo: role.logo,
+//   start: role.start,
+//   end: role.end,
+// }))
 
-function Resume() {
-  return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex justify-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="mr-3 h-6 w-6 flex-none" />
-        <span>Work</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {resumeDataObjects.map((role) => (
-          <Role key={role.id} role={role} />
-        ))}
-      </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
-    </div>
-  )
-}
+// function Resume() {
+//   return (
+//     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+//       <h2 className="flex justify-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+//         <BriefcaseIcon className="mr-3 h-6 w-6 flex-none" />
+//         <span>Work</span>
+//       </h2>
+//       <ol className="mt-6 space-y-4">
+//         {resumeDataObjects.map((role) => (
+//           <Role key={role.id} role={role} />
+//         ))}
+//       </ol>
+//       <Button href="#" variant="secondary" className="group mt-6 w-full">
+//         Download CV
+//         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+//       </Button>
+//     </div>
+//   )
+// }
 
-const educationData: Array<Role> = [
-  {
-    company: 'Edx/University of Sydney',
-    title: 'The Coding Bootcamp',
-    logo: logoUsyd,
-    start: 'October 2024',
-    end: 'February 2025',
-  },
-  {
-    company: 'University of New South Wales',
-    title: 'Bachelor of Music/Bachelor of Education',
-    logo: logoUnsw,
-    start: '2012',
-    end: '2017',
-  },
-  {
-    company: 'LinkedIn Learning',
-    title: 'Numerous online courses in web development',
-    logo: logoLinkedIn,
-    start: '2022',
-    end: 'Present',
-  },
-]
+// const educationData: Array<Role> = [
+//   {
+//     company: 'Edx/University of Sydney',
+//     title: 'The Coding Bootcamp',
+//     logo: logoUsyd,
+//     start: 'October 2024',
+//     end: 'February 2025',
+//   },
+//   {
+//     company: 'University of New South Wales',
+//     title: 'Bachelor of Music/Bachelor of Education',
+//     logo: logoUnsw,
+//     start: '2012',
+//     end: '2017',
+//   },
+//   {
+//     company: 'LinkedIn Learning',
+//     title: 'Numerous online courses in web development',
+//     logo: logoLinkedIn,
+//     start: '2022',
+//     end: 'Present',
+//   },
+// ]
 
-// Isolate education data objects for React components from the original mutable source
-const educationDataObjects = educationData.map((role, i) => ({
-  id: i,
-  company: role.company,
-  title: role.title,
-  logo: role.logo,
-  start: role.start,
-  end: role.end,
-}))
+// // Isolate education data objects for React components from the original mutable source
+// const educationDataObjects = educationData.map((role, i) => ({
+//   id: i,
+//   company: role.company,
+//   title: role.title,
+//   logo: role.logo,
+//   start: role.start,
+//   end: role.end,
+// }))
 
-function Education() {
-  return (
-    <div className="h-full rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex justify-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <EducationIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Education</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {educationDataObjects.map((role) => (
-          <Role key={role.id} role={role} />
-        ))}
-      </ol>
-    </div>
-  )
-}
+// function Education() {
+//   return (
+//     <div className="h-full rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+//       <h2 className="flex justify-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+//         <EducationIcon className="h-6 w-6 flex-none" />
+//         <span className="ml-3">Education</span>
+//       </h2>
+//       <ol className="mt-6 space-y-4">
+//         {educationDataObjects.map((role) => (
+//           <Role key={role.id} role={role} />
+//         ))}
+//       </ol>
+//     </div>
+//   )
+// }
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
@@ -343,21 +350,19 @@ export default async function Home() {
         <div className="max-w-2xl">
           <div className="text-center sm:text-left">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-              Software developer, LMS specialist, music educator, and lifelong
-              learner.
+              LMS Specialist, Software Developer, Teacher, and lifelong learner.
             </h1>
             <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
-              I&apos;m Mitch, a Sydney-based former educator turned software
-              developer who discovered that code, like music, creates harmony
-              through carefully orchestrated patterns. My commitment to lifelong
-              learning drives me to continuously explore new technologies and
-              approaches that solve real world problems.
+              I&apos;m Mitch, a Sydney-based LMS administrator and software
+              developer with 10 years experience in education. My commitment to
+              lifelong learning drives me to continuously explore new
+              technologies and approaches that solve real world problems.
             </p>
           </div>
           <div className="flex items-center justify-center sm:justify-start">
             <BoltIcon className="h-4 w-4 text-yellow-600" />
             <p className="ml-2 text-base text-zinc-600 dark:text-zinc-400">
-              Currently focusing on: TypeScript, React
+              Currently focusing on: TypeScript, React, LMS task automation
             </p>
           </div>
           {/* <div className="mt-6 flex gap-6">
