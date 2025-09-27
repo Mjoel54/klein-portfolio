@@ -7,12 +7,12 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { BoltIcon } from '@heroicons/react/24/solid'
 
-import logoLinkedIn from '@/images/logos/linkedIn.svg'
-import logoUnsw from '@/images/logos/unsw.svg'
-import logoUsyd from '@/images/logos/usyd.svg'
-import logoAlg from '@/images/logos/alg.svg'
-import logoCarrington from '@/images/logos/carrington.svg'
-import logoDet from '@/images/logos/det.svg'
+// import logoLinkedIn from '@/images/logos/linkedIn.svg'
+// import logoUnsw from '@/images/logos/unsw.svg'
+// import logoUsyd from '@/images/logos/usyd.svg'
+// import logoAlg from '@/images/logos/alg.svg'
+// import logoCarrington from '@/images/logos/carrington.svg'
+// import logoDet from '@/images/logos/det.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -386,8 +386,8 @@ export default async function Home() {
         </div>
       </Container>
       <Photos />
-      <Container className="mt-24 md:mt-28">
-        {/* <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+      {/* <Container className="mt-24 md:mt-28"> */}
+      {/* <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
@@ -398,7 +398,7 @@ export default async function Home() {
             <Resume />
           </div>
         </div> */}
-        <div className="flex w-full flex-col gap-4 md:flex-row">
+      {/* <div className="flex w-full flex-col gap-4 md:flex-row">
           <div className="w-full md:w-1/2">
             <Resume />
           </div>
@@ -406,7 +406,7 @@ export default async function Home() {
             <Education />
           </div>
         </div>
-      </Container>
+      </Container> */}
     </>
   )
 }
