@@ -45,7 +45,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'I’m Mitchell Klein. I live in Sydney, where I design the future.',
 }
 
 export default function About() {
@@ -69,20 +69,16 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              My journey into programming began while coordinating a Learning
-              Management System at ALG, an Australian tertiary education
+              My journey into programming began while coordinating Canvas, a
+              Learning Management System at an Australian tertiary education
               provider. Working closely with digital learning tools sparked my
               interest in the technology behind them and led me to pursue
               development more seriously.
             </p>
             <p>
-              I recently completed &quot;The Coding Bootcamp&quot; through
-              USYD/EDx, where I strengthened my technical foundation and
-              collaborative coding skills. My current project is <em>Lumi</em> -
-              home tasker, a full-stack MERN application created in TypeScript
-              designed to simplify chore management for busy
-              households—combining my organisational abilities with practical
-              problem-solving.
+              My current project is <em>LMS Quiz Manager</em> - A TypeScript
+              application designed to manage quizzes in both Canvas and Moodle
+              Learning Management Systems (LMS)
             </p>
             <p>
               What interests me about coding is how similar it is to music
@@ -96,10 +92,10 @@ export default function About() {
             <p>
               I&apos;m ready to leverage my React and TypeScript expertise,
               along with my strong problem-solving abilities and eye for detail
-              in a junior dev role. My technical skills in modern web
-              development, combined with my background in educational
-              technology, position me to make immediate contributions to
-              development teams.
+              in LMS Administrator and Platform Specialist roles. My technical
+              skills in modern web development, combined with my background in
+              educational technology, position me to make immediate
+              contributions to development teams.
             </p>
           </div>
         </div>
