@@ -16,6 +16,15 @@ import { GitHubIcon } from '@/components/SocialIcons'
 
 const projectData = [
   {
+    name: 'LMS Quiz Manager',
+    description:
+      'A TypeScript application designed to manage quizzes in both Canvas and Moodle Learning Management Systems (LMS)',
+    technologies: ['TypeScript', 'Node.js', 'Canvas LMS API'],
+    deployedLink: 'https://github.com/Mjoel54/canvas-quiz-manager',
+    githubLink: 'https://github.com/Mjoel54/canvas-quiz-manager',
+    logo: logoAcademix,
+  },
+  {
     name: 'Lumi',
     description:
       'Lumi is a household task management app to make organising your home a breeze',
